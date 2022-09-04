@@ -1,0 +1,60 @@
+.ingredients{
+	@include bg('../img/bgIngredients.jpg');
+	@extend %content;
+	color: $white;
+
+	.container{
+		justify-content: flex-end;
+	}
+
+	.ingredients__block{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 50px 80px 70px;
+		max-width: 630px;
+		height: auto;
+		background: rgba(0, 0, 0, 0.8);
+		@include taplet{
+			max-width: 630px;
+		}
+		@include phone{
+			padding: 20px;
+		}
+
+		.ingredients__block__icons{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			@media screen and (max-width: 600px) {
+				flex-wrap: wrap;
+				width: 50%;
+			}
+
+			img{
+				display: inline-block;
+				width: 100%;
+				margin: 14px;
+				@include phone{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.ingredients__block__title-item{
+		font: {
+			family: 'Yeseva One';
+			style: normal;
+			weight: 400;
+			size: 36px;
+		}
+		line-height: 42px;
+	}
+
+		.ingredients__block__title-icon{
+			width: 100%;
+			margin: 25px;
+		}
+}

@@ -1,0 +1,60 @@
+.footer{
+	background: rgba(0, 0, 0, 0.75);
+	@extend %content;
+	min-height: 375px;
+	color: $white;
+
+	.container{
+		text-align: center;
+		justify-content: space-between;
+		@include taplet{
+			flex-direction: column;
+			margin-top: 30px;
+		}
+
+		h2{
+			font: {
+				family: 'Lato';
+				weight: 400;
+				size: 21px;
+			}
+			line-height: 24px;
+			padding-bottom: 24px;
+		}
+
+		.footer__title-img{
+			padding-bottom: 30px;
+		}
+
+		.footer__left{
+			max-width: 410px;
+			@include taplet{
+				display: none;
+			}
+		}
+
+		.footer__center{
+			min-width: 240px;
+			padding-left: 30px;
+		}
+
+		.footer__right{
+			min-width: 240px;
+			padding-left: 30px;
+		}
+	}
+
+	.container>div, .footer__title{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__center-footer{
+		padding-top: 40px;
+		@include taplet{
+			padding-top: 20px;
+			padding-bottom: 30px;
+		}
+	}
+}

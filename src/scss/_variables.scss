@@ -1,0 +1,58 @@
+$white: #FFFFFF;
+$mustard: #cc9900;
+$gray: #4c4c4c;
+$lmustard: #c89f2d;
+$lgray: #9b9b9b;
+
+%content{
+	min-height: 750px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@mixin bg($image) {
+	background: {
+		image: url($image);
+		repeat: no-repeat;
+		size: cover;
+		position: center;
+	}
+}
+
+@mixin bgOpacity($image, $start, $finish) {
+	background: linear-gradient(270deg, $start 18.35%, $finish 84.09%);
+	box-shadow: inset 0px 4px 40px rgba(126, 3, 3, 0.1);
+	position: relative;
+
+	&::after{
+		content: "";
+		background: url($image);
+		opacity: 2%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		z-index: 2;
+	}
+}
+
+@mixin taplet {
+	@media  screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin taplet2 {
+	@media screen and (max-width: 950px) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media screen and (max-width: 450px) {
+		@content;
+	}
+}

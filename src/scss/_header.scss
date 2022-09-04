@@ -1,0 +1,58 @@
+.header{
+	@include bg('../img/bgHeader.jpg');
+	@extend %content;
+	
+	.container{
+		flex-direction: column;
+		text-align: center;
+		color: $white;
+		padding: 100px 0;
+	}
+		.header__text{
+			font: {
+				family: 'Yeseva One';
+				size: 90px;
+			};
+			line-height: 104px;
+			margin-top: 210px;
+			@media screen and (max-width:700px) {
+				font-size: 60px;
+				line-height: 70px;
+				margin-top: 0;
+			}
+			@include phone{
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+
+		.header__group{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include taplet{
+				flex-direction: column;
+			}
+		}
+
+		.header__group-item{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 218px;
+			height: 80px;
+			background-color: rgba(255, 255, 255, 0.6) ;
+			margin: 0 17px;
+			@include taplet{
+				margin: 17px;
+			}
+		}
+
+		.header__icon{
+			margin: 50px;
+			@include phone{
+				margin: 10px;
+			}
+		}
+}
+
